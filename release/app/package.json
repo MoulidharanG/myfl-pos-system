@@ -1,0 +1,20 @@
+{
+  "name": "fleksa-pos-printer",
+  "version": "0.0.1",
+  "description": "The best pos software for all kind of printers",
+  "main": "./dist/main/main.js",
+  "author": {
+    "name": "Fleksa POS maintainers",
+    "email": "mohamed.jakkariya@fleksa.de",
+    "url": "https://github.com"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts",
+    "postinstall": "npm run electron-rebuild && npm run link-modules"
+  },
+  "dependencies": {
+    "printer": "^0.4.0"
+  },
+  "license": "MIT"
+}
